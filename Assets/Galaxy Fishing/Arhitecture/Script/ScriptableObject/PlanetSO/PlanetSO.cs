@@ -3,27 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetSO : AbstractPlanetSO
+public class PlanetSO 
 {
-    [SerializeField] private Transform _orbitCenter;
-    [SerializeField] private int _orbitDistance;
-    [SerializeField] private float _orbitSpeed;
+    [SerializeField] private Transform OrbitCenter;
+    [SerializeField] private int OrbitDistance;
 
-    [SerializeField] private PlanetZones _planetZones;
-    [SerializeField] private List<Planet> _satellites;
+    [SerializeField] private PlanetZones PlanetZones;
+    [SerializeField] private List<Planet> Satellites;
 
-    [SerializeField] private int _gas;
-    [SerializeField] private int _water;
-    [SerializeField] private int _ground;
-    [SerializeField] private int _metal;
-
-    public void SetOrbit(Transform orbitCenter, int orbitDistance, float orbitSpeed)
-    {
-        _orbitCenter = orbitCenter;
-        _orbitDistance = orbitDistance;
-        _orbitSpeed = orbitSpeed;
-    }
-
-    //public bool
+    [SerializeField] private int Gas;
+    [SerializeField] private int Water;
+    [SerializeField] private int Ground;
+    [SerializeField] private int Metal;
 }
-//

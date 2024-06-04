@@ -2,6 +2,7 @@
 
 public class AbstractObject : MonoBehaviour
 {
+    [Header("Main")]
     [SerializeField] private uint _id;
     [SerializeField] private string _name;
 

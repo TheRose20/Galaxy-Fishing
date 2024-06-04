@@ -47,19 +47,19 @@ public class Orbit : MonoBehaviour
         _orbitHeight = Mathf.CeilToInt(Vector3.Magnitude(_orbitCenter.position - transform.position));
     }
 
-    private void FixedUpdate()
-    {
-        if (!_magneting && _onOrbit && _orbitCenter != null)
-        {
-            OrbitMove();
-        }
-        //else if (Vector3.Distance(transform.position, _orbitCenter.position) > _star.MaxPlanetRange)
-        //{
+    //private void FixedUpdate()
+    //{
+    //    if (!_magneting && _onOrbit && _orbitCenter != null)
+    //    {
+    //        OrbitMove();
+    //    }
+    //    //else if (Vector3.Distance(transform.position, _orbitCenter.position) > _star.MaxPlanetRange)
+    //    //{
 
-            //}
-        else
-            MoveToStar();
-    }
+    //        //}
+    //    else
+    //        MoveToStar();
+    //}
 
     private void MoveToStar()
     {

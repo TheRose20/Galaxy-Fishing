@@ -4,7 +4,8 @@
 public class PlanetRandomSO : AbstractPlanetRandomSO
 {
     [Header("Satellites")]
-    [SerializeField] private PlanetSO[] _satellites;
+    [SerializeField, Range(0f, 1f)] private float _chanceOfCreationAsSetellite = 0f;
+    [SerializeField] private PlanetRandomSO _satellites;
     [Space]
     [SerializeField] private int _minOrbitDistance = 66;
     [SerializeField] private int _maxOrbitDistance = 66;
@@ -16,7 +17,7 @@ public class PlanetRandomSO : AbstractPlanetRandomSO
     [SerializeField] private int _minWater = 200;
     [SerializeField] private int _maxWater = 250;
 
-    [SerializeField] private int _miGround = 500;
+    [SerializeField] private int _minGround = 500;
     [SerializeField] private int _maxGround = 550;
 
     [SerializeField] private int _minMetal = 150;

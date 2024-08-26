@@ -13,4 +13,11 @@ public class Star : AbstractPlanet
 
         _lightStrenght = lightStrenght;
     }
+    
+    public void Init(Star star)
+    {
+        base.Init(star.Mass, star.Radius);
+
+        _lightStrenght = star.LightStrenght;
+    }
 }

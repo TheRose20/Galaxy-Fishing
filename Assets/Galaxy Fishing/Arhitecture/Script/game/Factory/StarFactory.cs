@@ -1,5 +1,4 @@
-﻿using UnityEditor.Profiling.Memory.Experimental;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 public class StarFactory : Singleton<StarFactory>
@@ -47,6 +46,7 @@ public class StarFactory : Singleton<StarFactory>
 
         star.SetName(name);
         star.Init(mass, radius, lightStrengh);
+
 
         return star;
     }

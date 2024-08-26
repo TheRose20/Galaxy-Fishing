@@ -8,14 +8,10 @@ public class FactoryStarSystem : Singleton<FactoryStarSystem>
         Random.InitState(id);
         return CreateOnlyStarSystem(id);
     }
-    public StarSystem GetAllStarSystem(int id)
-    {
-
-    }
 
     private StarSystem CreateOnlyStarSystem(int id)
     {
-        StarFactory.Instance.GetStar(id, )
+        //StarFactory.Instance.GetStar(id, )
 
         return null;
     }

@@ -24,7 +24,7 @@ public class PoissonDiskKDTree : MonoBehaviour
         points = GeneratePoints(_param.MinDistanceBetweenStars, _param.MaxDistanceBetweenStars, regionSizeVector2, _strarsSpawnCount);
         points = await GetPoitsInCircle(points, regionSizeVector2);
 
-        GameObject galaxy = new GameObject("Galaxy");
+        GameObject galaxy = new GameObject($"Galaxy {_seed}");
         galaxy.isStatic = true;
 
         GenerateSpheresAsync(regionSize, galaxy);
@@ -60,7 +60,11 @@ public class PoissonDiskKDTree : MonoBehaviour
         Vector3 position = new Vector3(point.x - (regionSize / 2), 0, point.y - (regionSize / 2));
         GameObject sphere = Instantiate(_starSystemPrefab, position, Quaternion.identity);
         sphere.transform.parent = galaxy.transform;
-        sphere.isStatic = true;
+
+        MakeStatic(sphere);
+
+        //sphere.isStatic = true;
+
     }
 
     private void MakeStatic(GameObject obj)

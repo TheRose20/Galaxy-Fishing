@@ -7,7 +7,7 @@ public class Star : AbstractPlanet
     [SerializeField] private float _lightStrenght;
     public float LightStrenght => _lightStrenght;
 
-    public void Init(uint mass, uint radius, float lightStrenght)
+    public void Init(uint mass, float radius, float lightStrenght)
     {
         base.Init(mass, radius);
 

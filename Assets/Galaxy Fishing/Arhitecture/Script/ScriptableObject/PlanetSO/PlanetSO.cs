@@ -3,16 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Planet", menuName = "Planet/Planets/Create new Planet", order = 51)]
 public class PlanetSO : AbstractPlanetSO
 {
-    //[SerializeField] private Transform OrbitCenter;
-    //[SerializeField] private int OrbitDistance;
+    [SerializeField, Tooltip("Optional, if nothing will use standart Generator name")] private string _name;
 
-    //[SerializeField] private PlanetZones PlanetZones;
-    //[SerializeField] private List<Planet> Satellites;
-
-    //[SerializeField] private int Gas;
-    //[SerializeField] private int Water;
-    //[SerializeField] private int Ground;
-    //[SerializeField] private int Metal;
 
     [Header("Satellites")]
     [SerializeField] private PlanetSO[] _satellites;
@@ -30,4 +22,16 @@ public class PlanetSO : AbstractPlanetSO
     [SerializeField] private ColorSO[] _waterColor;
     [SerializeField] private ColorSO[] _groundColor;
     [SerializeField] private ColorSO[] _metalColor;
+
+    public string Name { get => _name; set => _name = value; }
+    public PlanetSO[] Satellites { get => _satellites; set => _satellites = value; }
+    public int OrbitDistance { get => _orbitDistance; set => _orbitDistance = value; }
+    public int Gas { get => _gas; set => _gas = value; }
+    public int Water { get => _water; set => _water = value; }
+    public int Ground { get => _ground; set => _ground = value; }
+    public int Metal { get => _metal; set => _metal = value; }
+    public ColorSO[] GasColor { get => _gasColor; set => _gasColor = value; }
+    public ColorSO[] WaterColor { get => _waterColor; set => _waterColor = value; }
+    public ColorSO[] GroundColor { get => _groundColor; set => _groundColor = value; }
+    public ColorSO[] MetalColor { get => _metalColor; set => _metalColor = value; }
 }

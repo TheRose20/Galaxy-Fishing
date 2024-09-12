@@ -33,10 +33,13 @@ public class PoissonDiskKDTree : MonoBehaviour
     private void CreateSphers(float regionSize, GameObject galaxy)
     {
 
+
         foreach (Vector2 point in points)
         {
             Vector3 position = new Vector3(point.x - (regionSize / 2), 0, point.y - (regionSize / 2));
             GameObject sphere = Instantiate(_starSystemPrefab, position, Quaternion.identity);
+            StarSystem starSystem = sphere.GetComponent<StarSystem>();
+            //starSystem.FastInit()
             sphere.transform.parent = galaxy.transform;
 
         }

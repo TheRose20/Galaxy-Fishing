@@ -4,20 +4,20 @@
 public class StarFactory : Singleton<StarFactory>
 {
 
-    public Star GetStar(int id, StarRandomSO starParam)
+    public Star GetStar(uint id, StarRandomSO starParam)
     {
-        Random.InitState(id);
+        Random.InitState((int)id);
         return CreateRandomStar(id, starParam);
     }
 
-    public Star GetStar(int id, StarSO starParam)
+    public Star GetStar(uint id, StarSO starParam)
     {
-        Random.InitState(id);
+        Random.InitState((int)id);
         return CreateStar(id, starParam);
 
     }
 
-    private Star CreateStar(int id, StarSO param)
+    private Star CreateStar(uint id, StarSO param)
     {
         Star star = new Star();
         star.SetId((uint)id);
@@ -33,13 +33,13 @@ public class StarFactory : Singleton<StarFactory>
 
         return star;
     }
-    private Star CreateRandomStar(int id, StarRandomSO param)
+    private Star CreateRandomStar(uint id, StarRandomSO param)
     {
         Star star = new Star();
-        star.SetId((uint)id);
+        star.SetId(id);
 
         uint mass = (uint)Random.Range(param.MinMass, param.MaxMass);
-        uint radius = (uint)Random.Range(param.MinRadius, param.MaxRadius);
+        float radius = Random.Range(param.MinRadius, param.MaxRadius);
         float lightStrengh = Random.Range(param.MinLightStrenght, param.MaxLightStrenght);
 
         string name = $"GenaricStar  {Random.Range(10, 100)} - {Random.Range(200 , 300)}"; //refactor

@@ -5,9 +5,9 @@ public class AbstractPlanet : AbstractObject
 {
     [Header("Second")]
     [SerializeField] protected uint Mass;
-    [SerializeField] protected uint Radius;
+    [SerializeField] protected float Radius;
 
-    public virtual void Init(uint mass, uint radius)
+    public virtual void Init(uint mass, float radius)
     {
         Mass = mass;
         Radius = radius;

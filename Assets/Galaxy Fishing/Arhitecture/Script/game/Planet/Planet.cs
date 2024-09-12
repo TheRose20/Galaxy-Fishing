@@ -24,17 +24,21 @@ public class Planet : AbstractPlanet
     public int Ground { get => _ground; set => _ground = value; }
     public int Metal { get => _metal; set => _metal = value; }
 
-    public void Init(Planet planet)
+    public void Init(uint mass, float radius, Planet planet)
     {
-        _orbitCenter = planet.OrbitCenter;
-        _orbitDistance = planet.OrbitDistance;
 
         _water = planet.Water;
         _ground = planet.Ground;
         _metal = planet.Metal;
         _gas = planet.Gas;
 
+        base.Init(mass, radius);
+    }
 
+    public void SetOrbit(Transform orbitCenter, float orbitDistance)
+    {
+        _orbitCenter = orbitCenter;
+        _orbitDistance = orbitDistance;
     }
 
     public void InitZoneInStarSystem()

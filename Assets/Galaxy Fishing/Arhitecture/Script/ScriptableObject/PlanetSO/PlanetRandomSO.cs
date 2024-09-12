@@ -28,4 +28,21 @@ public class PlanetRandomSO : AbstractPlanetRandomSO
     [SerializeField] private ColorSO[] _waterColor;
     [SerializeField] private ColorSO[] _groundColor;
     [SerializeField] private ColorSO[] _metalColor;
+
+    public float ChanceOfCreationAsSetellite { get => _chanceOfCreationAsSetellite; set => _chanceOfCreationAsSetellite = value; }
+    public PlanetRandomSO Satellites { get => _satellites; set => _satellites = value; }
+    public int MinOrbitDistance { get => _minOrbitDistance; set => _minOrbitDistance = value; }
+    public int MaxOrbitDistance { get => _maxOrbitDistance; set => _maxOrbitDistance = value; }
+    public int MinGas { get => _minGas; set => _minGas = value; }
+    public int MaxGas { get => _maxGas; set => _maxGas = value; }
+    public int MinWater { get => _minWater; set => _minWater = value; }
+    public int MaxWater { get => _maxWater; set => _maxWater = value; }
+    public int MinGround { get => _minGround; set => _minGround = value; }
+    public int MaxGround { get => _maxGround; set => _maxGround = value; }
+    public int MinMetal { get => _minMetal; set => _minMetal = value; }
+    public int MaxMetal { get => _maxMetal; set => _maxMetal = value; }
+    public ColorSO[] GasColor { get => _gasColor; set => _gasColor = value; }
+    public ColorSO[] WaterColor { get => _waterColor; set => _waterColor = value; }
+    public ColorSO[] GroundColor { get => _groundColor; set => _groundColor = value; }
+    public ColorSO[] MetalColor { get => _metalColor; set => _metalColor = value; }
 }
